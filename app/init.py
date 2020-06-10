@@ -1,3 +1,9 @@
+# -*- coding: UTF-8 -*-
+# @Summary :
+# @Author  : marvin
+# @Time    : 2020/6/10 2:42 下午
+# @Log     : demo01
+#            author datetime(DESC) summary
 from tortoise import Tortoise, run_async
 
 from app.models import Team, Event, Tournament
@@ -13,7 +19,7 @@ async def init():
 
     await Tortoise.generate_schemas()
     tournamet = Tournament(name='new tournament')
-    print('sdadas')
+
     print(tournamet.name)
     await tournamet.save()
 
